@@ -14,7 +14,7 @@
 #' Use large 'number' and small 'fc_cutoff' to get all the genes kept.
 #' @examples
 #'
-function(folders, celltype, input, keeps = c("logFC", "FDR"), filter_by = "FDR", number = 30000, fc_cutoff = 0.000001){
+DE_table <- function(folders, celltype, input, keeps = c("logFC", "FDR"), filter_by = "FDR", number = 30000, fc_cutoff = 0.000001){
   types <- sort(unique(pData(input)$CellType))
   lists <- vector(mode = "list", length = length(types))
   for (l in 1:length(folders)) {

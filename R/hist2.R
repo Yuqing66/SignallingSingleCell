@@ -13,7 +13,7 @@
 #' @examples
 #'
 
-function(data, break_by=1, barnum = 0,main="", xlab=""){
+hist2 <- function(data, break_by=1, barnum = 0,main="", xlab=""){
   if (barnum > 0) break_by <- (max(data)-min(data))/barnum
   hist(data, breaks = seq(min(data), max(data)+break_by, by=break_by), main = main, xlab = xlab)
 }
